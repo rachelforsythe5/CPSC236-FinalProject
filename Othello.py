@@ -1,0 +1,10 @@
+# CPSC 236 Final Project
+# Group Members: Brady Crago, Rachel Forsythe, Lukas Holsopple
+# Team Leader: Rachel Forsythe
+
+## GAME 2 ##
+
+# Game chosen: Othello
+''' On a grid, a black and white player places tiles of their color on the board. The opponent's tiles
+between the newly placed tile and that player's existing tiles are flipped to become the color of the
+player's tiles. The game ends when the board fills up and the player with the most tiles of their color wins.'''
