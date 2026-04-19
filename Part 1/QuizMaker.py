@@ -25,27 +25,17 @@ def validate_student_id(student_id):
     Format: A followed by exactly 5 digits between 1 and 9.
     Example: A12345
     """
-    attempts = 0
-    valid_id = False
-    
-    while attempts < 3:
-        student_id = input("Enter your ID (Ex. A12345): ")
-    
-        if len(student_id) == 6:
-            if student_id[0] == "A":
-                digits_valid = True
-    
-                for ch in student_id[1:]:
-                    if ch < '1' or ch > '9':
-                        digits_valid = False
-    
-                if digits_valid:
-                    print("\nID is valid.")
-                    valid_id = True
-                    break
-    
-        print("ID is invalid.")
-        attempts += 1
+    if len(student_id) != 6:
+        return False
+
+    if student_id[0] != "A":
+        return False
+
+    for ch in student_id[1:]:
+        if ch < '1' or ch > '9':
+            return False
+
+    return True
 
 def get_student_info():
     """
@@ -54,12 +44,13 @@ def get_student_info():
     """
     fname = input("Enter First Name: ").strip()
     lname = input("Enter Last Name: ").strip()
-
+    
     attempts = 0
     while attempts < MAX_ID_ATTEMPTS:
-        id = input("Enter Student ID (Format: A12345): ").strip()
-        if validate_student_id(id):
-            return fname, lname, id
+        student_id = input("Enter Student ID (Format: A12345): ").strip()
+        if validate_student_id(student_id):
+            print("ID is valid.")
+            return fname, lname, student_id
         else:
             attempts += 1
             print("Invalid ID format.")
