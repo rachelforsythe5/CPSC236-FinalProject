@@ -52,16 +52,8 @@ The file includes:
 - Final score
 - Time taken
 - Each question with:
- - Correct answer
- - Student’s answer
-
-- Item 1
- - Nested Item A
- - Nested Item B
-
-1. Step One
- 1. Step One-One
- 2. Step One-Two
+  - Correct answer
+  - Student’s answer
 
 ## Part 2 - Memory Puzzle
 ### Features
