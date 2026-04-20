@@ -34,10 +34,10 @@ The first row should be a header row.
 
 ## How to Run
 1. Ensure Python 3 is installed.
-2. Place QuizMaker.py and testbank.csv in the same folder.
+2. Place **QuizMaker.py** and **testbank.csv** in the same folder.
 3. Open a terminal or command prompt.
 4. Run the program:
- - python QuizMaker.py
+**python QuizMaker.py**
 
 ## Scoring
 - 10 questions → 1 point each
@@ -46,7 +46,7 @@ The first row should be a header row.
 
 ## Output
 Results are saved as:
-StudentID_FirstName_LastName.txt
+**StudentID_FirstName_LastName.txt**
 The file includes:
 - Student ID and name
 - Final score
@@ -54,6 +54,14 @@ The file includes:
 - Each question with:
  - Correct answer
  - Student’s answer
+
+- Item 1
+ - Nested Item A
+ - Nested Item B
+
+1. Step One
+ 1. Step One-One
+ 2. Step One-Two
 
 ## Part 2 - Memory Puzzle
 ### Features
