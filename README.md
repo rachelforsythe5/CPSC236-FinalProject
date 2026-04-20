@@ -23,8 +23,7 @@ Make sure the following files are in the same directory:
 - QuizMaker.py – main program file
 - testbank.csv – question bank file
 
-testbank.csv Format
-
+#### testbank.csv Format
 The CSV file must contain:
 1. Question text
 2. Answer choice A
@@ -38,7 +37,7 @@ The first row should be a header row.
 2. Place QuizMaker.py and testbank.csv in the same folder.
 3. Open a terminal or command prompt.
 4. Run the program:
-python QuizMaker.py
+ - python QuizMaker.py
 
 ## Scoring
 - 10 questions → 1 point each
@@ -53,8 +52,8 @@ The file includes:
 - Final score
 - Time taken
 - Each question with:
--  Correct answer
--  Student’s answer
+ - Correct answer
+ - Student’s answer
 
 ## Part 2 - Memory Puzzle
 ### Features
