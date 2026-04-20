@@ -16,15 +16,15 @@ MAX_ID_ATTEMPTS = 3
 VALID_CHOICES = ['A', 'B', 'C']
 
 def clear_screen():
-    """Clears the terminal screen."""
+    '''Clears the terminal screen.'''
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def validate_student_id(student_id):
-    """
+    '''
     Validates student ID.
     Format: A followed by exactly 5 digits between 1 and 9.
     Example: A12345
-    """
+    '''
     if len(student_id) != 6:
         return False
 
@@ -38,10 +38,10 @@ def validate_student_id(student_id):
     return True
 
 def get_student_info():
-    """
+    '''
     Prompts user for first name, last name, and a valid student ID.
     Allows only 3 failed ID attempts.
-    """
+    '''
     fname = input("Enter First Name: ").strip()
     lname = input("Enter Last Name: ").strip()
     
@@ -59,9 +59,9 @@ def get_student_info():
     sys.exit()
 
 def choose_quiz_length():
-    """
+    '''
     Allows student to choose number of questions: 10 or 20.
-    """
+    '''
     while True:
         choice = input("Choose number of questions (10 or 20): ").strip()
         if choice == '10':
@@ -72,11 +72,11 @@ def choose_quiz_length():
             print("Invalid choice. Enter 10 or 20.")
 
 def load_testbank(filename="testbank.csv"):
-    """
+    '''
     Reads questions from a CSV test bank file.
     Question in column 1, answers A–C in columns 2–4,
     correct answer in column 5.
-    """
+    '''
     if not os.path.exists(filename):
         print("Test bank file not found.")
         sys.exit()
@@ -101,10 +101,10 @@ def load_testbank(filename="testbank.csv"):
     return questions
 
 def ask_questions(questions, points_per_question):
-    """
+    '''
     Displays questions one at a time, records student answers,
     enforces the 10-minute time limit, and allows redo of incorrect questions.
-    """
+    '''
     start_time = time.time()
     score = 0
     results = []
@@ -163,10 +163,10 @@ def ask_questions(questions, points_per_question):
     return score, total_time, results
 
 def save_results(id, fname, lname, score, elapsed_time, results):
-    """
+    '''
     Saves quiz results to a text file named:
     StudentID_FirstName_LastName.txt
-    """
+    '''
     filename = f"{id}_{fname}_{lname}.txt"
 
     with open(filename, "w") as file:
@@ -182,7 +182,7 @@ def save_results(id, fname, lname, score, elapsed_time, results):
             file.write(f"Student Answer: {r['student']}\n\n")
 
 def run_quiz():
-    """Runs one complete quiz session."""
+    '''Runs one complete quiz session.'''
     clear_screen()
     print("=== Python Quiz Maker ===\n")
 
@@ -203,7 +203,7 @@ def run_quiz():
     print(f"Elapsed Time: {elapsed_time:.2f} seconds")
 
 def main():
-    """Main program loop."""
+    '''Main program loop.'''
     while True:
         run_quiz()
         choice = input("\nEnter Q to quit or S to start a new quiz: ").strip().upper()
