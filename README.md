@@ -30,6 +30,7 @@ The CSV file must contain:
 3. Answer choice B
 4. Answer choice C
 5. Correct answer (A, B, or C)
+
 The first row should be a header row.
 
 ## How to Run
@@ -37,6 +38,7 @@ The first row should be a header row.
 2. Place ```QuizMaker.py``` and ```testbank.csv``` in the same folder.
 3. Open a terminal or command prompt.
 4. Run the program:
+
 ```python QuizMaker.py```
 
 ## Scoring
@@ -46,7 +48,9 @@ The first row should be a header row.
 
 ## Output
 Results are saved as:
+
 ```StudentID_FirstName_LastName.txt```
+
 The file includes:
 - Student ID and name
 - Final score
